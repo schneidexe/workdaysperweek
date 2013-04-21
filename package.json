@@ -4,7 +4,8 @@
     "description":"a library for getting the work days in a week.",
     "author":"schneidexe",
     "dependencies":{
-        "jasmine-node":">= 1.0.26"
+        "jasmine-node":">= 1.0.26",
+        "moment":">= 2.0.0"
     },
     "engine":"node >= 0.8",
     "scripts":{

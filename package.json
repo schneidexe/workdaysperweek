@@ -1,7 +1,7 @@
 {
     "name": "workdaysperweek",
     "version": "0.0.1",
-    "description": "a library for getting the work days in a week.",
+    "description": "a node.jslibrary for getting the work days in a week.",
     "author": "schneidexe",
     "dependencies": {
         "jasmine-node": ">= 1.0.26",

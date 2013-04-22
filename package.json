@@ -1,14 +1,14 @@
 {
-    "name":"workdaysperweek",
-    "version":"0.0.1",
-    "description":"a library for getting the work days in a week.",
-    "author":"schneidexe",
-    "dependencies":{
-        "jasmine-node":">= 1.0.26",
-        "moment":">= 2.0.0"
+    "name": "workdaysperweek",
+    "version": "0.0.1",
+    "description": "a library for getting the work days in a week.",
+    "author": "schneidexe",
+    "dependencies": {
+        "jasmine-node": ">= 1.0.26",
+        "moment": ">= 2.0.0"
     },
-    "engine":"node >= 0.8",
-    "scripts":{
-        "test":"node_modules/jasmine-node/bin/jasmine-node --verbose src/test/js/"
+    "engine": "node >= 0.10",
+    "scripts": {
+        "test": "node_modules/jasmine-node/bin/jasmine-node --verbose src/test/js/"
     }
 }

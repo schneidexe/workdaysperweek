@@ -105,35 +105,36 @@ describe('test suite for work days per week', function () {
         })
     })
     describe('general holiday functionality', function () {
-        it('week 52/2012 has 3 working days (christmas)', function () {
-            expect(workDays.workDays('de', 'by', 52, 2012).length).toEqual(3);
+        it('week 52/2012 has 4 working days (christmas)', function () {
+            expect(workDays.workDays('de', 'by', 52, 2012).length).toEqual(4);
         })
-        it('week 1/2013 has 4 working days (new year\'s day)', function () {
-            expect(workDays.workDays('de', 'by', 1, 2013).length).toEqual(4);
+        it('week 1/2013 has 5 working days (new year\'s day)', function () {
+            expect(workDays.workDays('de', 'by', 1, 2013).length).toEqual(5);
         })
-        it('week 13/2013 has 4 working days (good friday)', function () {
-            expect(workDays.workDays('de', 'by', 13, 2013).length).toEqual(4);
+        it('week 13/2013 has 5 working days (good friday)', function () {
+            expect(workDays.workDays('de', 'by', 13, 2013).length).toEqual(5);
         })
-        it('week 14/2013 has 4 working days (easter monday)', function () {
-            expect(workDays.workDays('de', 'by', 14, 2013).length).toEqual(4);
+        it('week 14/2013 has 5 working days (easter monday)', function () {
+            expect(workDays.workDays('de', 'by', 14, 2013).length).toEqual(5);
         })
-        it('week 19/2013 has 4 working days (ascension)', function () {
-            expect(workDays.workDays('de', 'by', 19, 2013).length).toEqual(4);
+        it('week 19/2013 has 5 working days (ascension)', function () {
+            expect(workDays.workDays('de', 'by', 19, 2013).length).toEqual(5);
         })
-        it('working days in week 19/2013 are May 6-8th and 10th', function () {
+        it('working days in week 19/2013 are May 6-8th and 10-11th', function () {
             var result = workDays.workDays('de', 'by', 19, 2013);
             expect(result[0].format()).toEqual(moment('2013/05/06').format());
             expect(result[1].format()).toEqual(moment('2013/05/07').format());
             expect(result[2].format()).toEqual(moment('2013/05/08').format());
             expect(result[3].format()).toEqual(moment('2013/05/10').format());
+            expect(result[4].format()).toEqual(moment('2013/05/11').format());
         })
     })
     describe('regional holiday functionality', function () {
-        it('week 1/2012 has 4 working days in bavaria (holy 3 kings)', function () {
-            expect(workDays.workDays('de', 'by', 1, 2012).length).toEqual(4);
+        it('week 1/2012 has 5 working days in bavaria (holy 3 kings)', function () {
+            expect(workDays.workDays('de', 'by', 1, 2012).length).toEqual(5);
         })
-        it('week 1/2012 has 5 working days in hamburg (no holy 3 kings)', function () {
-            expect(workDays.workDays('de', 'hh', 1, 2012).length).toEqual(5);
+        it('week 1/2012 has 6 working days in hamburg (no holy 3 kings)', function () {
+            expect(workDays.workDays('de', 'hh', 1, 2012).length).toEqual(6);
         })
     })
 })

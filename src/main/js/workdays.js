@@ -49,9 +49,9 @@ workDays = function(country, state, week, year) {
     // get start of week
     var weekStartDate = moment().year(year).week(week).startOf('week');
 
-    // check monday 'til friday
+    // check monday 'til saturday
     var workingDays = [];
-    for (day = 1; day < 6; day++) {
+    for (day = 1; day < 7; day++) {
         var date = moment(weekStartDate.day(day));
         if (!isHoliday(country, state, date))
             workingDays.push(date);

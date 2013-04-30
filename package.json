@@ -1,11 +1,14 @@
 {
     "name": "workdaysperweek",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A node.js library for getting the work days in a week.",
     "author": "schneidexe",
     "dependencies": {
-        "jasmine-node": ">= 1.0.26",
-        "moment": ">= 2.0.0"
+        "moment": ">= 2.0.0",
+        "winston": ">=0.7.1"
+    },
+    "devDependencies": {
+        "jasmine-node": ">= 1.0.26"
     },
     "engine": "node >= 0.10",
     "main": "./src/main/js/workdays",

@@ -1,6 +1,11 @@
-var moment = require("moment");
+var moment = require("moment"),
+    winston = require("winston");
 
-var states = {
+var logger = new (winston.Logger)({
+    transports: [
+      new winston.transports.Console({ colorize: 'true', level: 'debug' })
+    ]}),
+    states = {
         DE : [ 'BW', 'BY', 'BE', 'BB', 'HB', 'HH', 'HE', 'MV', 'NI', 'NW', 'RP', 'SL', 'SN', 'ST', 'SH', 'TH' ]
     },
     easterOffsets = {
@@ -61,7 +66,7 @@ workDays = function(country, state, week, year) {
 }
 
 isHoliday = function(country, state, date) {
-    console.log("checking date " + date.format());
+    logger.debug("checking date " + date.format());
 
     // check for fix holiday
     var countryFixHolidays = holidays[country];
@@ -70,11 +75,11 @@ isHoliday = function(country, state, date) {
         if (holidayDate.isSame(date)) {
             // general holidays
             if (countryFixHolidays[holiday].length === 0) {
-                console.log(date.format() + " is a fix holiday");
+                logger.info(date.format() + " is a fix holiday");
                 return true;
             // regional holidays
             } else if (countryFixHolidays[holiday].indexOf(state) > -1) {
-                console.log(date.format() + " is a fix holiday");
+                logger.info(date.format() + " is a fix holiday");
                 return true;
             }
         }
@@ -87,11 +92,11 @@ isHoliday = function(country, state, date) {
         if (holidayDate.isSame(date)) {
             // general holidays
             if (countryEasterOffsets[offset].length === 0) {
-                console.log(date.format() + " is a variable holiday");
+                logger.info(date.format() + " is a variable holiday");
                 return true;
             // regional holidays
             } else if (countryEasterOffsets[offset].indexOf(state) > -1) {
-                console.log(date.format() + " is a fix holiday");
+                logger.info(date.format() + " is a fix holiday");
                 return true;
             }
         }

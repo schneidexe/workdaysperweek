@@ -1,27 +1,27 @@
 var moment = require("moment");
 
 var states = {
-        de : [ 'bw', 'by', 'be', 'bb', 'hb', 'hh', 'he', 'mv', 'ni', 'nw', 'rp', 'sl', 'sn', 'st', 'sh', 'th' ]
+        DE : [ 'BW', 'BY', 'BE', 'BB', 'HB', 'HH', 'HE', 'MV', 'NI', 'NW', 'RP', 'SL', 'SN', 'ST', 'SH', 'TH' ]
     },
     easterOffsets = {
-        de : {
+        DE : {
             '-2' : [ ],                                  // good friday
             1 : [ ],                                     // easter monday
             39 : [ ],                                    // ascension day
             50 : [ ],                                    // whit monday
-            60 : [ 'bw', 'by', 'he', 'nw', 'rp', 'sl' ]  // corpus christi
+            60 : [ 'BW', 'BY', 'HE', 'NW', 'RP', 'SL' ]  // corpus christi
         }
     },
     holidays = {
-        de : {
+        DE : {
             '01/01' : [ ],                               // new year's day
-            '01/06' : [ 'bw', 'by', 'st' ],              // holy 3 kings
+            '01/06' : [ 'BW', 'BY', 'ST' ],              // holy 3 kings
             '05/01' : [ ],                               // labor day
-            '08/15' : [ 'by', 'sl' ],                    // assumption day
+            '08/15' : [ 'BY', 'SL' ],                    // assumption day
             '10/03' : [ ],                               // reunion day
-            '10/31' : [ 'bb', 'mv', 'sn', 'st', 'th' ],  // reformation day
-            '11/01' : [ 'bw', 'by', 'nw', 'rp', 'sl' ],  // holy saints
-            '11/20' : [ 'sn' ],                          // penance day
+            '10/31' : [ 'BB', 'MV', 'SN', 'ST', 'TH' ],  // reformation day
+            '11/01' : [ 'BW', 'BY', 'NW', 'RP', 'SL' ],  // holy saints
+            '11/20' : [ 'SN' ],                          // penance day
             '12/25' : [ ],                               // christmas day
             '12/26' : [ ]                                // boxing day
         }

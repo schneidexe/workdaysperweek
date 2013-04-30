@@ -1,7 +1,7 @@
 {
     "name": "workdaysperweek",
     "version": "1.0.1",
-    "description": "A node.js library for getting the work days in a week.",
+    "description": "A node.js module for getting the work days in a week.",
     "author": "schneidexe",
     "dependencies": {
         "moment": ">= 2.0.0",

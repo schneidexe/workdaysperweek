@@ -3,6 +3,10 @@
     "version": "1.0.1",
     "description": "A node.js module for getting the work days in a week.",
     "author": "schneidexe",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/schneidexe/workdaysperweek.git"
+    },
     "dependencies": {
         "moment": ">= 2.0.0",
         "winston": ">=0.7.1"

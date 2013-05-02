@@ -22,3 +22,8 @@ Country and state are mandatory. If no week/year given current week/year will be
     workDays('DE', 'BY');
     workDays('DE', 'BY', '14');
     workDays('DE', 'BY', '14', 2013);
+
+license
+----
+
+This library was developed by [hour1](http://www.hour1.de) and is freely distributable under the terms of the MIT license.
